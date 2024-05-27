@@ -11,6 +11,7 @@
 		A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BC12C04D49B00BBDD11 /* ContentView.swift */; };
 		A9C82BC42C04D49C00BBDD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */; };
 		A9C82BC72C04D49C00BBDD11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C82BC62C04D49C00BBDD11 /* Preview Assets.xcassets */; };
+		A9C82BCE2C04D50300BBDD11 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BCD2C04D50300BBDD11 /* LongPressGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A9C82BC12C04D49B00BBDD11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C82BC62C04D49C00BBDD11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A9C82BCD2C04D50300BBDD11 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */,
 				A9C82BC12C04D49B00BBDD11 /* ContentView.swift */,
+				A9C82BCD2C04D50300BBDD11 /* LongPressGesture.swift */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */,
 				A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */,
+				A9C82BCE2C04D50300BBDD11 /* LongPressGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
