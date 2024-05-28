@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CBF9F2C065C3E00466F49 /* HapticView.swift */; };
 		A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */; };
 		A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BC12C04D49B00BBDD11 /* ContentView.swift */; };
 		A9C82BC42C04D49C00BBDD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A94CBF9F2C065C3E00466F49 /* HapticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticView.swift; sourceTree = "<group>"; };
 		A9C82BBC2C04D49B00BBDD11 /* SomeCodeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeCodeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCodeSwiftUIApp.swift; sourceTree = "<group>"; };
 		A9C82BC12C04D49B00BBDD11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				A9C82BCD2C04D50300BBDD11 /* LongPressGesture.swift */,
 				A9C82BCF2C04DCA800BBDD11 /* MagnificationGesture.swift */,
 				A9C82BD12C04F17000BBDD11 /* DragGestureView.swift */,
+				A94CBF9F2C065C3E00466F49 /* HapticView.swift */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */,
+				A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */,
 				A9C82BD02C04DCA800BBDD11 /* MagnificationGesture.swift in Sources */,
 				A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */,
 				A9C82BCE2C04D50300BBDD11 /* LongPressGesture.swift in Sources */,
