@@ -24,7 +24,21 @@ class HapticManager {
 
 struct HapticView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button("success", action: { HapticManager.instance.notification(type: .success) })
+            Button("warning", action: { HapticManager.instance.notification(type: .warning) })
+            Button("error", action: { HapticManager.instance.notification(type: .error) })
+            
+            Divider()
+            
+            Button("soft", action: { HapticManager.instance.impact(style: .soft) })
+            Button("light", action: { HapticManager.instance.impact(style: .light) })
+            Button("medium", action: { HapticManager.instance.impact(style: .medium) })
+            Button("rigid", action: { HapticManager.instance.impact(style: .rigid) })
+            Button("heavy", action: { HapticManager.instance.impact(style: .heavy) })
+            
+            
+        }.buttonStyle(BorderedButtonStyle())
     }
 }
 
