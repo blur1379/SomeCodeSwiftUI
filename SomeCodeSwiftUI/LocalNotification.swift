@@ -57,6 +57,11 @@ class NotificationManager {
         )
         UNUserNotificationCenter.current().add(request)
     }
+    
+    func cancelNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
 }
 
 struct LocalNotification: View {
