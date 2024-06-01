@@ -16,7 +16,7 @@ class CoreDataViewModel: ObservableObject {
         container = NSPersistentContainer(name: "FruitContainer")
         container.loadPersistentStores { success, error in
             if let error {
-                print("error for persistent stores")
+                print("error for persistent stores: \(error)")
             } else {
                 print("Successfully loaded core data")
             }
@@ -30,13 +30,22 @@ class CoreDataViewModel: ObservableObject {
         do {
             savedEntity = try container.viewContext.fetch(request)
         } catch let error {
-            print("Error for fetching the request")
+            print("Error for fetching the request with error: \(error)")
         }
     }
     
     func addFruit(text: String) {
         let newFruit = FruitEntity(context: container.viewContext)
         newFruit.name = text
+        saveData()
+    }
+    
+    func deleteFruit(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let entity = savedEntity[index]
+        container.viewContext.delete(entity)
+        
+        saveData()
     }
     
     func saveData() {
@@ -53,6 +62,7 @@ struct FruitCoreData: View {
     
     @StateObject var vm = CoreDataViewModel()
     @State var textFieldText: String = ""
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -82,7 +92,9 @@ struct FruitCoreData: View {
                     ForEach(vm.savedEntity) { entity in
                         Text(entity.name ?? "")
                     }
+                    .onDelete(perform: vm.deleteFruit)
                 }
+                .listStyle(PlainListStyle())
             }
             .navigationTitle("Fruits")
         }

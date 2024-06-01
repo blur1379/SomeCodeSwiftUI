@@ -14,7 +14,7 @@ class NotificationManager {
     
     func requestAuthorization() {
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        UNUserNotificationCenter.current().requestAuthorization { success, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: options) { success, error in
             if let error {
                 print(error)
             } else {
