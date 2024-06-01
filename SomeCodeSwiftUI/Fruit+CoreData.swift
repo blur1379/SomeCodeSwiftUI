@@ -78,7 +78,11 @@ struct FruitCoreData: View {
                 }
                 .padding(.horizontal)
                 
-                Spacer()
+                List {
+                    ForEach(vm.savedEntity) { entity in
+                        Text(entity.name ?? "")
+                    }
+                }
             }
             .navigationTitle("Fruits")
         }
