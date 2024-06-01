@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CBF9F2C065C3E00466F49 /* HapticView.swift */; };
+		A959DC012C0B132700B71A75 /* FruitContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */; };
+		A959DC032C0B13C500B71A75 /* Fruit+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */; };
 		A967096A2C07A5C000DC3CA6 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96709692C07A5C000DC3CA6 /* LocalNotification.swift */; };
 		A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */; };
 		A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BC12C04D49B00BBDD11 /* ContentView.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		A94CBF9F2C065C3E00466F49 /* HapticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticView.swift; sourceTree = "<group>"; };
+		A959DC002C0B132700B71A75 /* FruitContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitContainer.xcdatamodel; sourceTree = "<group>"; };
+		A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fruit+CoreData.swift"; sourceTree = "<group>"; };
 		A96709692C07A5C000DC3CA6 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		A9C82BBC2C04D49B00BBDD11 /* SomeCodeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeCodeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCodeSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				A9C82BD12C04F17000BBDD11 /* DragGestureView.swift */,
 				A94CBF9F2C065C3E00466F49 /* HapticView.swift */,
 				A96709692C07A5C000DC3CA6 /* LocalNotification.swift */,
+				A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */,
+				A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
 			);
@@ -152,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A959DC032C0B13C500B71A75 /* Fruit+CoreData.swift in Sources */,
+				A959DC012C0B132700B71A75 /* FruitContainer.xcdatamodeld in Sources */,
 				A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */,
 				A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */,
 				A9C82BD02C04DCA800BBDD11 /* MagnificationGesture.swift in Sources */,
@@ -364,6 +372,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A959DC002C0B132700B71A75 /* FruitContainer.xcdatamodel */,
+			);
+			currentVersion = A959DC002C0B132700B71A75 /* FruitContainer.xcdatamodel */;
+			name = FruitContainer.xcdatamodeld;
+			path = /Users/mohammadblur/Desktop/SomeCodeSwiftUI/SomeCodeSwiftUI/FruitContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A9C82BB42C04D49B00BBDD11 /* Project object */;
 }
