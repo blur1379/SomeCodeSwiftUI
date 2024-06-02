@@ -18,6 +18,7 @@
 		A9C82BCE2C04D50300BBDD11 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BCD2C04D50300BBDD11 /* LongPressGesture.swift */; };
 		A9C82BD02C04DCA800BBDD11 /* MagnificationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BCF2C04DCA800BBDD11 /* MagnificationGesture.swift */; };
 		A9C82BD22C04F17000BBDD11 /* DragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BD12C04F17000BBDD11 /* DragGestureView.swift */; };
+		A9E51D9E2C0CE4D700498B0F /* BackgroundThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E51D9D2C0CE4D700498B0F /* BackgroundThread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A9C82BCD2C04D50300BBDD11 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
 		A9C82BCF2C04DCA800BBDD11 /* MagnificationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGesture.swift; sourceTree = "<group>"; };
 		A9C82BD12C04F17000BBDD11 /* DragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureView.swift; sourceTree = "<group>"; };
+		A9E51D9D2C0CE4D700498B0F /* BackgroundThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThread.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				A94CBF9F2C065C3E00466F49 /* HapticView.swift */,
 				A96709692C07A5C000DC3CA6 /* LocalNotification.swift */,
 				A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */,
+				A9E51D9D2C0CE4D700498B0F /* BackgroundThread.swift */,
 				A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A959DC032C0B13C500B71A75 /* Fruit+CoreData.swift in Sources */,
+				A9E51D9E2C0CE4D700498B0F /* BackgroundThread.swift in Sources */,
 				A959DC012C0B132700B71A75 /* FruitContainer.xcdatamodeld in Sources */,
 				A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */,
 				A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */,
