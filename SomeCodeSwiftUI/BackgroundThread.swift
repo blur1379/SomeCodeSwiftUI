@@ -26,8 +26,26 @@ class BackgroundThreadViewModel: ObservableObject {
 }
 
 struct BackgroundThread: View {
+    
+    @StateObject var vm = BackgroundThreadViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack(spacing: 10) {
+                Text("Load Data")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .onTapGesture {
+                        vm.fetchData()
+                    }
+                
+                ForEach(vm.dataArray, id: \.self) { item in
+                    Text(item)
+                        .font(.headline)
+                        .foregroundColor(.red)
+                }
+            }
+        }
     }
 }
 
