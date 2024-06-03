@@ -13,8 +13,14 @@ class BackgroundThreadViewModel: ObservableObject {
     func fetchData() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             let newData = self?.downloadData()
+            // check thread
+            print("is main thread: \(Thread.isMainThread)")
+            print("current thread: \(Thread.current)")
+            
             DispatchQueue.main.async {
                 self?.dataArray = newData ?? []
+                print("is main thread: \(Thread.isMainThread)")
+                print("current thread: \(Thread.current)")
             }
         }
         
