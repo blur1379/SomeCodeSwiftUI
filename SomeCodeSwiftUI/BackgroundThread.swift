@@ -13,7 +13,9 @@ class BackgroundThreadViewModel: ObservableObject {
     func fetchData() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             let newData = self?.downloadData()
-            self?.dataArray = newData ?? []
+            DispatchQueue.main.async {
+                self?.dataArray = newData ?? []
+            }
         }
         
     }
