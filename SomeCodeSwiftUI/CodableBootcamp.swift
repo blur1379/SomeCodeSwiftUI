@@ -12,6 +12,14 @@ struct CustomerModel: Codable, Identifiable {
     let name: String
     let points: Int
     let isPremium: Bool
+    
+    enum CodingKeys: CodingKey {
+        case id
+        case name
+        case points
+        case isPremium
+    }
+    
 }
 
 class CodableViewModel: ObservableObject {
