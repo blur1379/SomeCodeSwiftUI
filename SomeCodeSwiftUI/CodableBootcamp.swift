@@ -7,8 +7,36 @@
 
 import SwiftUI
 
+struct CustomModel: Codable, Identifiable {
+    let id: String
+    let name: String
+    let points: Int
+    let isPremium: Bool
+}
+
 class CodableViewModel: ObservableObject {
     
+    @Published var customer: CustomModel? = nil
+    
+    init() {
+        
+    }
+    
+    func getData() {
+        
+    }
+    
+    func getJSONData() -> Data? {
+        let dictionary: [String:Any] = [
+            "id" : "12345",
+            "name" : "Jon",
+            "points" : 5,
+            "isPremium" : true,
+        ]
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: dictionary, options: [])
+        return jsonData
+    }
 }
 
 struct CodableBootcamp: View {
