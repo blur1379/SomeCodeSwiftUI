@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomModel: Codable, Identifiable {
+struct CustomerModel: Codable, Identifiable {
     let id: String
     let name: String
     let points: Int
@@ -16,13 +16,25 @@ struct CustomModel: Codable, Identifiable {
 
 class CodableViewModel: ObservableObject {
     
-    @Published var customer: CustomModel? = nil
+    @Published var customer: CustomerModel? = nil
     
     init() {
         
     }
     
     func getData() {
+        guard let data = getJSONData() else { return }
+        if
+            let localData = try? JSONSerialization.jsonObject(with: data, options: []),
+            let dictionary = localData as? [String:Any],
+            let id = dictionary["id"] as? String,
+            let name = dictionary["name"] as? String,
+            let points = dictionary["points"] as? Int,
+            let isPremium = dictionary["isPremium"] as? Bool {
+            
+            let newCustomer = CustomerModel(id: id, name: name, points: points, isPremium: isPremium)
+            customer = newCustomer
+        }
         
     }
     
