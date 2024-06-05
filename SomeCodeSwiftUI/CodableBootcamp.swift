@@ -20,6 +20,12 @@ struct CustomerModel: Codable, Identifiable {
         case isPremium
     }
     
+    init(id: String, name: String, points: Int, isPremium: Bool) {
+        self.id = id
+        self.name = name
+        self.points = points
+        self.isPremium = isPremium
+    }
 }
 
 class CodableViewModel: ObservableObject {
@@ -27,7 +33,7 @@ class CodableViewModel: ObservableObject {
     @Published var customer: CustomerModel? = nil
     
     init() {
-        
+        getData()
     }
     
     func getData() {
