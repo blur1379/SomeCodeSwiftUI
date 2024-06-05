@@ -26,6 +26,14 @@ struct CustomerModel: Codable, Identifiable {
         self.points = points
         self.isPremium = isPremium
     }
+    
+    init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.points = try container.decode(Int.self, forKey: .points)
+        self.isPremium = try container.decode(Bool.self, forKey: .isPremium)
+    }
 }
 
 class CodableViewModel: ObservableObject {
