@@ -14,6 +14,7 @@ struct TimerBootcamp: View {
     @State var currentDate = Date()
     var dateFormatter : DateFormatter {
         let formatter = DateFormatter()
+        formatter.dateStyle = .medium
         formatter.timeStyle = .medium
         return formatter
     }
