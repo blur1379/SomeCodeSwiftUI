@@ -9,7 +9,17 @@ import SwiftUI
 
 struct TimerBootcamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RadialGradient(
+                gradient: Gradient(colors: [Color.purple, Color.pink]),
+                center: .center,
+                startRadius: 5,
+                endRadius: 500
+            )
+            .ignoresSafeArea()
+            
+            
+        }
     }
 }
 
