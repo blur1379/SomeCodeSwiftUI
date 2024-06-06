@@ -10,6 +10,7 @@
 		A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CBF9F2C065C3E00466F49 /* HapticView.swift */; };
 		A959DC012C0B132700B71A75 /* FruitContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */; };
 		A959DC032C0B13C500B71A75 /* Fruit+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */; };
+		A95AC35C2C124776006DF93A /* TimerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AC35B2C124776006DF93A /* TimerBootcamp.swift */; };
 		A967096A2C07A5C000DC3CA6 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96709692C07A5C000DC3CA6 /* LocalNotification.swift */; };
 		A99EE0FF2C0FAE6800984C36 /* CodableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */; };
 		A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */; };
@@ -26,6 +27,7 @@
 		A94CBF9F2C065C3E00466F49 /* HapticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticView.swift; sourceTree = "<group>"; };
 		A959DC002C0B132700B71A75 /* FruitContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitContainer.xcdatamodel; sourceTree = "<group>"; };
 		A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fruit+CoreData.swift"; sourceTree = "<group>"; };
+		A95AC35B2C124776006DF93A /* TimerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBootcamp.swift; sourceTree = "<group>"; };
 		A96709692C07A5C000DC3CA6 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBootcamp.swift; sourceTree = "<group>"; };
 		A9C82BBC2C04D49B00BBDD11 /* SomeCodeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeCodeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,10 +80,11 @@
 				A96709692C07A5C000DC3CA6 /* LocalNotification.swift */,
 				A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */,
 				A9E51D9D2C0CE4D700498B0F /* BackgroundThread.swift */,
+				A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */,
+				A95AC35B2C124776006DF93A /* TimerBootcamp.swift */,
 				A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
-				A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */,
 			);
 			path = SomeCodeSwiftUI;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */,
 				A9C82BD02C04DCA800BBDD11 /* MagnificationGesture.swift in Sources */,
 				A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */,
+				A95AC35C2C124776006DF93A /* TimerBootcamp.swift in Sources */,
 				A9C82BCE2C04D50300BBDD11 /* LongPressGesture.swift in Sources */,
 				A967096A2C07A5C000DC3CA6 /* LocalNotification.swift in Sources */,
 				A9C82BD22C04F17000BBDD11 /* DragGestureView.swift in Sources */,
