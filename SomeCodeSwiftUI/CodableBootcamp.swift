@@ -34,6 +34,14 @@ struct CustomerModel: Codable, Identifiable {
         self.points = try container.decode(Int.self, forKey: .points)
         self.isPremium = try container.decode(Bool.self, forKey: .isPremium)
     }
+    
+    func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.id, forKey: .id)
+        try container.encode(self.name, forKey: .name)
+        try container.encode(self.points, forKey: .points)
+        try container.encode(self.isPremium, forKey: .isPremium)
+    }
 }
 
 class CodableViewModel: ObservableObject {
