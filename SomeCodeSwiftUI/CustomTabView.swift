@@ -28,6 +28,34 @@ struct CustomTabView: View {
     }
 }
 
+class pageOffsetObserver: NSObject, ObservableObject {
+    @Published var collectionView: UICollectionView?
+    @Published var offset: CGFloat = 0
+    @Published private(set) var isObserving: Bool = false
+    
+    func observe() {
+        
+    }
+    
+    func remove() {
+        
+    }
+    
+}
+
+struct FindCollectionView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        view.backgroundColor = .clear
+        
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
+
 #Preview {
     CustomTabView()
 }
