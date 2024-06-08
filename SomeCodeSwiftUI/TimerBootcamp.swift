@@ -23,16 +23,20 @@ struct TimerBootcamp: View {
 //    @State var count: Int = 10
 //    @State var finishedText: String? = nil
     
-    @State var timeRemaining: String = ""
-    let futureDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
+//    @State var timeRemaining: String = ""
+//    let futureDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
+//    
+//    func updateTimeRemaining() {
+//        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
+//        let hour = remaining.hour ?? 0
+//        let minute = remaining.minute ?? 0
+//        let second = remaining.second ?? 0
+//        timeRemaining = "\(hour):\(minute):\(second)"
+//    }
     
-    func updateTimeRemaining() {
-        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
-        let hour = remaining.hour ?? 0
-        let minute = remaining.minute ?? 0
-        let second = remaining.second ?? 0
-        timeRemaining = "\(hour):\(minute):\(second)"
-    }
+    //loading animation
+    @State var count: Int = 0
+    
     var body: some View {
         ZStack {
             RadialGradient(
@@ -43,15 +47,22 @@ struct TimerBootcamp: View {
             )
             .ignoresSafeArea()
             
-            Text(timeRemaining)
-                .font(.system(size: 100, weight: .semibold, design: .rounded))
-                .foregroundColor(.white)
-                .lineLimit(1)
-                .minimumScaleFactor(0.1)
+            HStack(spacing: 15) {
+                Circle()
+                    .offset(y: count == 1 ? -20 : 0 )
+                Circle()
+                    .offset(y: count == 2 ? -20 : 0 )
+                Circle()
+                    .offset(y: count == 3 ? -20 : 0 )
+            }
+            .frame(width: 200)
+            .foregroundColor(.white)
             
         }
         .onReceive(timer, perform: { _ in
-           updateTimeRemaining()
+            withAnimation(.easeInOut(duration: 1.0)) {
+                count = count == 3 ? 0 : count + 1
+            }
         })
     }
 }
