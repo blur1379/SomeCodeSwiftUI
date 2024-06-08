@@ -11,6 +11,7 @@
 		A959DC012C0B132700B71A75 /* FruitContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */; };
 		A959DC032C0B13C500B71A75 /* Fruit+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */; };
 		A95AC35C2C124776006DF93A /* TimerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AC35B2C124776006DF93A /* TimerBootcamp.swift */; };
+		A95CBBB62C14F530004556EA /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95CBBB52C14F530004556EA /* FileManager.swift */; };
 		A967096A2C07A5C000DC3CA6 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96709692C07A5C000DC3CA6 /* LocalNotification.swift */; };
 		A98305802C13013B008AEF06 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983057F2C13013B008AEF06 /* CustomTabView.swift */; };
 		A99EE0FF2C0FAE6800984C36 /* CodableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */; };
@@ -29,6 +30,7 @@
 		A959DC002C0B132700B71A75 /* FruitContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitContainer.xcdatamodel; sourceTree = "<group>"; };
 		A959DC022C0B13C500B71A75 /* Fruit+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fruit+CoreData.swift"; sourceTree = "<group>"; };
 		A95AC35B2C124776006DF93A /* TimerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBootcamp.swift; sourceTree = "<group>"; };
+		A95CBBB52C14F530004556EA /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		A96709692C07A5C000DC3CA6 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		A983057F2C13013B008AEF06 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBootcamp.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */,
 				A95AC35B2C124776006DF93A /* TimerBootcamp.swift */,
 				A983057F2C13013B008AEF06 /* CustomTabView.swift */,
+				A95CBBB52C14F530004556EA /* FileManager.swift */,
 				A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
@@ -173,6 +176,7 @@
 				A959DC032C0B13C500B71A75 /* Fruit+CoreData.swift in Sources */,
 				A9E51D9E2C0CE4D700498B0F /* BackgroundThread.swift in Sources */,
 				A99EE0FF2C0FAE6800984C36 /* CodableBootcamp.swift in Sources */,
+				A95CBBB62C14F530004556EA /* FileManager.swift in Sources */,
 				A959DC012C0B132700B71A75 /* FruitContainer.xcdatamodeld in Sources */,
 				A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */,
 				A98305802C13013B008AEF06 /* CustomTabView.swift in Sources */,
