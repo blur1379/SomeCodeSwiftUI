@@ -18,12 +18,14 @@ class LocalFileManager {
         let dictionary = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let dictionary2 = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
         let dictionary3 = FileManager.default.temporaryDirectory
+        
     }
 }
 
 class FileManagerViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     let imageName: String = "Steve-jobs"
+    let manager = LocalFileManager.instance
     
     init() {
         getImageFromAssetsFolder()
@@ -31,6 +33,11 @@ class FileManagerViewModel: ObservableObject {
     
     func getImageFromAssetsFolder() {
         image = UIImage(named: imageName)
+    }
+    
+    func saveImage() {
+        guard let image else {return}
+        manager.saveImage(image: image, name: imageName)
     }
 }
 
@@ -50,7 +57,7 @@ struct FileManagerB: View {
                 }
                 
                 Button(action: {
-                    
+                    vm.saveImage()
                 }, label: {
                     Text("Save to FM")
                         .foregroundColor(.white)
