@@ -7,7 +7,22 @@
 
 import SwiftUI
 
+class FileManagerViewModel: ObservableObject {
+    @Published var image: UIImage? = nil
+    let imageName: String = "Steve-jobs"
+    
+    init() {
+        getImageFromAssetsFolder()
+    }
+    
+    func getImageFromAssetsFolder() {
+        image = UIImage(named: imageName)
+    }
+}
+
 struct FileManager: View {
+    @StateObject var vm = FileManagerViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
