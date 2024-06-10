@@ -15,10 +15,22 @@ class LocalFileManager {
         
         guard let data = image.jpegData(compressionQuality: 1.0) else { return }
         
-        let dictionary = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let dictionary2 = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
-        let dictionary3 = FileManager.default.temporaryDirectory
+//        let dictionary = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        let dictionary2 = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
+//        let dictionary3 = FileManager.default.temporaryDirectory
         
+        guard let path = FileManager
+                            .default
+                            .urls(for: .cachesDirectory, in: .userDomainMask)
+                            .first?
+                            .appendingPathComponent("\(name).jpg") else
+        { return }
+        
+        do {
+            try data.write(to: path)
+        } catch {
+            print("Error for saving the information with : \(error)")
+        }
     }
 }
 
