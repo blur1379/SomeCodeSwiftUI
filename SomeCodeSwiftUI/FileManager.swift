@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+
+class LocalFileManager {
+    static let instance = LocalFileManager()
+    
+    func saveImage(image: UIImage, name: String) {
+        
+        guard let data = image.jpegData(compressionQuality: 1.0) else { return }
+        
+        let dictionary = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let dictionary2 = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
+        let dictionary3 = FileManager.default.temporaryDirectory
+    }
+}
+
 class FileManagerViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     let imageName: String = "Steve-jobs"
@@ -20,7 +34,7 @@ class FileManagerViewModel: ObservableObject {
     }
 }
 
-struct FileManager: View {
+struct FileManagerB: View {
     @StateObject var vm = FileManagerViewModel()
     
     var body: some View {
@@ -54,5 +68,5 @@ struct FileManager: View {
 }
 
 #Preview {
-    FileManager()
+    FileManagerB()
 }
