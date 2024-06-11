@@ -63,6 +63,10 @@ class FileManagerViewModel: ObservableObject {
         image = UIImage(named: imageName)
     }
     
+    func getImageFromFileManager() {
+        image = manager.getImage(name: imageName)
+    }
+    
     func saveImage() {
         guard let image else {return}
         manager.saveImage(image: image, name: imageName)
