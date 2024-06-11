@@ -32,10 +32,25 @@ class LocalFileManager {
     func getImage(name: String) -> UIImage? {
         guard let path = getPathForImage(name: name)?.path,
               FileManager.default.fileExists(atPath: path) else {
-            print("Error for get the image :( ")
+            print("Error for get the path :( ")
             return nil
         }
         return UIImage(contentsOfFile: path)
+    }
+    
+    func deleteImage(name: String) {
+        guard let path = getPathForImage(name: name)?.path,
+              FileManager.default.fileExists(atPath: path) else {
+            print("Error for get the path :( ")
+            return
+        }
+        
+        do {
+            try FileManager.default.removeItem(atPath: path)
+            print("Successfully deleted")
+        } catch let error {
+            print("deleted error with : \(error)")
+        }
     }
     
     func getPathForImage(name: String) -> URL?{
