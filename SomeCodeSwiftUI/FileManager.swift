@@ -29,6 +29,15 @@ class LocalFileManager {
         }
     }
     
+    func getImage(name: String) -> UIImage? {
+        guard let path = getPathForImage(name: name)?.path,
+              FileManager.default.fileExists(atPath: path) else {
+            print("Error for get the image :( ")
+            return nil
+        }
+        return UIImage(contentsOfFile: path)
+    }
+    
     func getPathForImage(name: String) -> URL?{
         guard let path = FileManager
                             .default
@@ -38,6 +47,7 @@ class LocalFileManager {
         { return nil }
         return path
     }
+    
 }
 
 class FileManagerViewModel: ObservableObject {
