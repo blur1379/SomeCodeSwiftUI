@@ -10,18 +10,36 @@ import SwiftUI
 
 class LocalFileManager {
     static let instance = LocalFileManager()
+    let folderName = "some_code_app"
+    init() {
+        createFolderIfNeeded()
+    }
+    
+    func createFolderIfNeeded() {
+        guard
+            let path = FileManager
+                .default
+                .urls(for: .cachesDirectory, in: .userDomainMask)
+                .first?
+                .appendingPathComponent(folderName)
+                .path else { return }
+        
+        if !FileManager.default.fileExists(atPath: path) {
+            do {
+                try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print("error for creating The Directory ")
+            }
+        }
+    }
     
     func saveImage(image: UIImage, name: String) {
         
         guard let data = image.jpegData(compressionQuality: 1.0),
               let path = getPathForImage(name: name) else { return }
-        
 //        let dictionary = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
 //        let dictionary2 = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
 //        let dictionary3 = FileManager.default.temporaryDirectory
-        
-    
-        
         do {
             try data.write(to: path)
         } catch {
@@ -58,6 +76,7 @@ class LocalFileManager {
                             .default
                             .urls(for: .cachesDirectory, in: .userDomainMask)
                             .first?
+                            .appendingPathComponent(folderName)
                             .appendingPathComponent("\(name).jpg") else
         { return nil }
         return path
@@ -86,6 +105,10 @@ class FileManagerViewModel: ObservableObject {
         guard let image else {return}
         manager.saveImage(image: image, name: imageName)
     }
+    
+    func deleteImage() {
+        manager.deleteImage(name: imageName)
+    }
 }
 
 struct FileManagerB: View {
@@ -103,17 +126,33 @@ struct FileManagerB: View {
                         .cornerRadius(10)
                 }
                 
-                Button(action: {
-                    vm.saveImage()
-                }, label: {
-                    Text("Save to FM")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .padding()
-                        .padding(.horizontal)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                })
+                HStack {
+                    Button(action: {
+                        vm.saveImage()
+                    }, label: {
+                        Text("Save to FM")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .padding()
+                            .padding(.horizontal)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    })
+                    
+                    Button(action: {
+                        vm.deleteImage()
+                    }, label: {
+                        Text("Delete from FM")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .padding()
+                            .padding(.horizontal)
+                            .background(Color.red)
+                            .cornerRadius(10)
+                    })
+                }
+                
+            
                 Spacer()
             }
             .navigationTitle("File manager")
