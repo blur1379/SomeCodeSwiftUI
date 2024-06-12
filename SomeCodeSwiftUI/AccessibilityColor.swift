@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AccessibilityColor: View {
     @Environment(\.accessibilityReduceTransparency) var reduceTransparency
+    @Environment(\.colorSchemeContrast) var colorSchemeContrast
     var body: some View {
         NavigationStack {
             VStack {
                 Button("Button hi") {
                     
                 }
-                .foregroundStyle(.primary)
+                .foregroundStyle(colorSchemeContrast == .increased ? .white : .primary)
                 .buttonStyle(.borderedProminent)
                 
                 Button("Button hi") {
