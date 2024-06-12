@@ -16,6 +16,7 @@
 		A98305802C13013B008AEF06 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983057F2C13013B008AEF06 /* CustomTabView.swift */; };
 		A99EE0FF2C0FAE6800984C36 /* CodableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */; };
 		A9C63F1D2C1A2BA5000FB14A /* AccessibilityText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C63F1C2C1A2BA5000FB14A /* AccessibilityText.swift */; };
+		A9C63F1F2C1A3433000FB14A /* AccessibilityColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C63F1E2C1A3433000FB14A /* AccessibilityColor.swift */; };
 		A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */; };
 		A9C82BC22C04D49B00BBDD11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C82BC12C04D49B00BBDD11 /* ContentView.swift */; };
 		A9C82BC42C04D49C00BBDD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		A983057F2C13013B008AEF06 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		A99EE0FE2C0FAE6800984C36 /* CodableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBootcamp.swift; sourceTree = "<group>"; };
 		A9C63F1C2C1A2BA5000FB14A /* AccessibilityText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityText.swift; sourceTree = "<group>"; };
+		A9C63F1E2C1A3433000FB14A /* AccessibilityColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityColor.swift; sourceTree = "<group>"; };
 		A9C82BBC2C04D49B00BBDD11 /* SomeCodeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeCodeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C82BBF2C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCodeSwiftUIApp.swift; sourceTree = "<group>"; };
 		A9C82BC12C04D49B00BBDD11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				A983057F2C13013B008AEF06 /* CustomTabView.swift */,
 				A95CBBB52C14F530004556EA /* FileManager.swift */,
 				A9C63F1C2C1A2BA5000FB14A /* AccessibilityText.swift */,
+				A9C63F1E2C1A3433000FB14A /* AccessibilityColor.swift */,
 				A959DBFF2C0B132700B71A75 /* FruitContainer.xcdatamodeld */,
 				A9C82BC32C04D49C00BBDD11 /* Assets.xcassets */,
 				A9C82BC52C04D49C00BBDD11 /* Preview Content */,
@@ -186,6 +189,7 @@
 				A94CBFA02C065C3E00466F49 /* HapticView.swift in Sources */,
 				A9C82BD02C04DCA800BBDD11 /* MagnificationGesture.swift in Sources */,
 				A9C82BC02C04D49B00BBDD11 /* SomeCodeSwiftUIApp.swift in Sources */,
+				A9C63F1F2C1A3433000FB14A /* AccessibilityColor.swift in Sources */,
 				A9C63F1D2C1A2BA5000FB14A /* AccessibilityText.swift in Sources */,
 				A95AC35C2C124776006DF93A /* TimerBootcamp.swift in Sources */,
 				A9C82BCE2C04D50300BBDD11 /* LongPressGesture.swift in Sources */,
