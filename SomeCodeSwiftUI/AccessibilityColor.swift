@@ -10,6 +10,8 @@ import SwiftUI
 struct AccessibilityColor: View {
     @Environment(\.accessibilityReduceTransparency) var reduceTransparency
     @Environment(\.colorSchemeContrast) var colorSchemeContrast
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    @Environment(\.accessibilityInvertColors) var invertColors
     var body: some View {
         NavigationStack {
             VStack {
@@ -36,9 +38,9 @@ struct AccessibilityColor: View {
                 Button("Button hi") {
                     
                 }
-                .foregroundStyle(.green)
+                .foregroundStyle(differentiateWithoutColor ? .white : .green)
                 .buttonStyle(.borderedProminent)
-                .tint(.purple)
+                .tint(differentiateWithoutColor ? .black : .purple)
             }
             .frame(maxWidth: .infinity,maxHeight: .infinity)
             .background(reduceTransparency ? Color.black : Color.black.opacity(0.5))
